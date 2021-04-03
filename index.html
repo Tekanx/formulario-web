@@ -15,9 +15,11 @@
     <span id="gracias"></span>
     <form method="post" id="formBody" action="#">
         <fieldset>
-            <legend>Formulario</legend>
+            <h3>Formulario Registro</h3>
             <ul>
+
                 <!--Input Formulario-->
+
                 <li>
                     <label for="nameUser">Nombre del Usuario</label>
                     <input type="text" id="nameUser" required>
@@ -28,7 +30,7 @@
                 </li>
                 <li>
                     <label for="rutUser">Rut o Run del Usuario + Dígito Verificador</label>
-                    <input type="number" id="rutUser" max="99999999" required>
+                    <input type="number" id="rutUser" min="1111111" max="99999999" required>
                      - 
                     <input type="text" id="dv" maxlength="1" required>
                 </li>
@@ -38,7 +40,7 @@
                 </li>
                 <li>
                     <label for="phoneNumberUser">Número de Celular (Sin +569)</label>
-                    <input type="number" id="phoneNumberUser" max="99999999" required>
+                    <input type="number" id="phoneNumberUser" min="11111111" max="9999999" required>
                 </li>
 
                 <!--Selecciones Formulario-->
@@ -46,12 +48,13 @@
                 <li>
                     <label for="langProgramming">Selecciona 1 o más lenguajes de programación de su interés</label>
                     <ul>
-                        <li><input type="checkbox" name="langProgramming" id="python" required><label>Python</label></li>
-                        <li><input type="checkbox" name="langProgramming" id="java"><label>Java</label></li>
-                        <li><input type="checkbox" name="langProgramming" id="type"><label>TypeScript</label></li>
-                        <li><input type="checkbox" name="langProgramming" id="php"><label>PHP</label></li>
-                        <li><input type="checkbox" name="langProgramming" id="c"><label>C#</label></li>
-                        <li><input type="checkbox" name="langProgramming" id="c++"><label>C++</label></li>
+                        <br>
+                        <li><input type="checkbox" name="langProgramming" id="python" required><label> Python</label></li>
+                        <li><input type="checkbox" name="langProgramming" id="java"><label> Java</label></li>
+                        <li><input type="checkbox" name="langProgramming" id="type"><label> TypeScript</label></li>
+                        <li><input type="checkbox" name="langProgramming" id="php"><label> PHP</label></li>
+                        <li><input type="checkbox" name="langProgramming" id="c"><label> C#</label></li>
+                        <li><input type="checkbox" name="langProgramming" id="c++"><label> C++</label></li>
                     </ul>
                 </li>
                 <li>
@@ -87,7 +90,8 @@
                 </li>
                 <li>
                     <label for="desPersonal">Una descripción breve acerca de usted (máximo 300 letras)</label>
-                    <textarea id="desPersonal" maxlength="300" required></textarea>
+                    <br>
+                    <textarea id="desPersonal" minlength="1" maxlength="300" rows="5" cols="78" required></textarea>
                 </li>
 
                 <!--Botones Formulario-->
