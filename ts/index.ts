@@ -17,7 +17,7 @@ let lenguajeCmas = document.getElementById("c++");
 let conocimiento = document.getElementById("knowledge");
 let descripcion = document.getElementById("desPersonal");
 
-console.log(conocimiento.innerHTML.length);
+mensaje.style.display = "none";
 
 let btnEnviar = document.getElementById("enviar");
 let btnReset = document.getElementById("limpiar");
@@ -38,7 +38,6 @@ function enviarFormulario(event): void{
     if(faltasUsuario.length === 0){
         form.style.display = "none";
         mensaje.style.display = "block";
-        mensaje.innerHTML = "MUCHAS GRACIAS POR RELLENAR EL FORMULARIO!"
         mensaje.style.color = "#ff0000";
         console.log(conocimiento.innerHTML.length);
     }else faltas(faltasUsuario);
@@ -50,7 +49,7 @@ function faltas(faltasUsuario : string[]) : void {
     })
 }
 
-function limpiarFormulario(): void {
+function limpiarDatos(): void {
     nombreUsuario.nodeValue = '';
     apellidoUsuario.nodeValue = '';
     rut.nodeValue = '';
@@ -62,4 +61,4 @@ function limpiarFormulario(): void {
 
 btnEnviar.addEventListener("submit", enviarFormulario)
 
-btnReset.addEventListener("reset", limpiarFormulario)
+btnReset.addEventListener("reset", limpiarDatos)

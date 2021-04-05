@@ -19,6 +19,13 @@ body{
     background-position: center;
 }
 
+#gracias{
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
 form{
     background-color: dimgrey;
     box-shadow: 10px 15px 40px black;
