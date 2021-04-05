@@ -1,113 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <!--Stylesheet-->
-    <link rel="stylesheet" href="css/styles.css">
+    <head>
+        <!--Stylesheet-->
+        <link rel="stylesheet" href="css/styles.css">
 
-    <meta name="description" content="Formulario realizado para que una persona se identifique y se describa">
-    <meta name="keywords" content="Formulario">
-    <meta name="author" content="Tekanx">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <title>Formulario</title>
-</head>
-<body>
-    <span id="gracias"></span>
-    <form method="post" id="formBody" action="#">
-        <fieldset>
-            <h3>Formulario Registro</h3>
-            <ul>
-
-                <!--Input Formulario-->
-
-                <li>
-                    <label for="nameUser">Nombre del Usuario</label>
-                    <input type="text" id="nameUser" required>
-                </li>
-                <li>
-                    <label for="lastnameUser">Apellidos del Usuario</label>
-                    <input type="text" id="lastnameUser" required>
-                </li>
-                <li>
-                    <label for="rutUser">Rut o Run del Usuario + Dígito Verificador</label>
-                    <input type="number" id="rutUser" min="1111111" max="99999999" required>
-                     - 
-                    <input type="text" id="dv" maxlength="1" required>
-                </li>
-                <li>
-                    <label for="emailUser">Email del Usuario</label>
-                    <input type="email" id="emailUser" required>
-                </li>
-                <li>
-                    <label for="phoneNumberUser">Número de Celular (Sin +569)</label>
-                    <input type="number" id="phoneNumberUser" min="11111111" max="9999999" required>
-                </li>
-
-                <!--Selecciones Formulario-->
-
-                <li>
-                    <label for="langProgramming">Selecciona 1 o más lenguajes de programación de su interés</label>
-                    <ul>
-                        <br>
-                        <li><input type="checkbox" name="langProgramming" id="python" required><label> Python</label></li>
-                        <li><input type="checkbox" name="langProgramming" id="java"><label> Java</label></li>
-                        <li><input type="checkbox" name="langProgramming" id="type"><label> TypeScript</label></li>
-                        <li><input type="checkbox" name="langProgramming" id="php"><label> PHP</label></li>
-                        <li><input type="checkbox" name="langProgramming" id="c"><label> C#</label></li>
-                        <li><input type="checkbox" name="langProgramming" id="c++"><label> C++</label></li>
-                    </ul>
-                </li>
-                <li>
-                    <label for="knowledge">¿Cuál es su nivel de conocimiento en programación?</label>
-                    <br>
-                    <label>0%</label> 
-                    <input type="range" id="knowledge" list="marcas">
-                    <datalist id="marcas">
-                        <option value="0">
-                        <option value="10">
-                        <option value="20">
-                        <option value="30">
-                        <option value="40">
-                        <option value="50">
-                        <option value="60">
-                        <option value="70">
-                        <option value="80">
-                        <option value="90">
-                        <option value="100">
-                    </datalist>
-                    <label>100%</label> 
-                </li>
-                <li>
-                    <label for="yearsKnowledge">¿Cuantos años de experiencia laboral tiene?</label>
-                    <ul>
-                        <input type="radio" name="yearsKnowledge" id="uno" required><label></label>1
-                        <input type="radio" name="yearsKnowledge" id="dos"><label></label>2
-                        <input type="radio" name="yearsKnowledge" id="tres"><label></label>3
-                        <input type="radio" name="yearsKnowledge" id="cuatro"><label></label>4
-                        <input type="radio" name="yearsKnowledge" id="cinco"><label></label>5
-                        <input type="radio" name="yearsKnowledge" id="+cinco"><label></label>+5
-                    </ul>
-                </li>
-                <li>
-                    <label for="desPersonal">Una descripción breve acerca de usted (máximo 300 letras)</label>
-                    <br>
-                    <textarea id="desPersonal" minlength="1" maxlength="300" rows="5" cols="78" required></textarea>
-                </li>
-
-                <!--Botones Formulario-->
+        <meta name="description" content="Formulario realizado para que una persona se identifique y se describa">
+        <meta name="keywords" content="Formulario">
+        <meta name="author" content="Tekanx">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Formulario</title>
+    </head>
+    <body>
+        <span id="gracias"></span>
+        <form id="formBody" method="post" action="#">
+            <fieldset>
+                <h3>Formulario Registro</h3>
                 <ul>
+                    <!--Input Formulario-->
+
+                    <li>
+                        <label for="nameUser">Nombre del Usuario</label>
+                        <input type="text" id="nameUser" >
+                    </li>
+                    <li>
+                        <label for="lastnameUser">Apellidos del Usuario</label>
+                        <input type="text" id="lastnameUser" >
+                    </li>
+                    <li>
+                        <label for="rutUser">Rut o Run del Usuario + Dígito Verificador</label>
+                        <input type="number" id="rutUser" min="1111111" max="99999999" >
+                        - 
+                        <input type="text" id="dv" maxlength="1" >
+                    </li>
+                    <li>
+                        <label for="emailUser">Email del Usuario</label>
+                        <input type="email" id="emailUser" required>
+                    </li>
+                    <li>
+                        <label for="phoneNumberUser">Número de Celular (Sin +56)</label>
+                        <input type="number" id="phoneNumberUser" min="911111111" max="999999999" >
+                    </li>
+
+                    <!--Selecciones Formulario-->
+
+                    <li>
+                        <label for="langProgramming">Selecciona 1 o más lenguajes de programación de su interés</label>
+                        <ul>
+                            <br>
+                            <li><input type="checkbox" name="langProgramming" id="python" ><label> Python</label></li>
+                            <li><input type="checkbox" name="langProgramming" id="java"><label> Java</label></li>
+                            <li><input type="checkbox" name="langProgramming" id="type"><label> TypeScript</label></li>
+                            <li><input type="checkbox" name="langProgramming" id="php"><label> PHP</label></li>
+                            <li><input type="checkbox" name="langProgramming" id="c"><label> C#</label></li>
+                            <li><input type="checkbox" name="langProgramming" id="c++"><label> C++</label></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="knowledge">¿Cuál es su nivel de conocimiento en programación?</label>
+                        <br>
+                        <label>0%</label> 
+                        <input type="range" id="knowledge" list="marcas" step="10" value="0">
+                        <datalist id="marcas">
+                            <option value="0">
+                            <option value="10">
+                            <option value="20">
+                            <option value="30">
+                            <option value="40">
+                            <option value="50">
+                            <option value="60">
+                            <option value="70">
+                            <option value="80">
+                            <option value="90">
+                            <option value="100">
+                        </datalist>
+                        <label>100%</label> 
+                    </li>
+                    <li>
+                        <label for="yearsKnowledge">¿Cuantos años de experiencia laboral tiene?</label>
+                        <ul>
+                            <input type="radio" name="yearsKnowledge" id="uno" ><label></label>1
+                            <input type="radio" name="yearsKnowledge" id="dos"><label></label>2
+                            <input type="radio" name="yearsKnowledge" id="tres"><label></label>3
+                            <input type="radio" name="yearsKnowledge" id="cuatro"><label></label>4
+                            <input type="radio" name="yearsKnowledge" id="cinco"><label></label>5
+                            <input type="radio" name="yearsKnowledge" id="+cinco"><label></label>+5
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="desPersonal">Una descripción breve acerca de usted (máximo 300 letras)</label>
+                        <br>
+                        <textarea id="desPersonal" minlength="1" maxlength="300" rows="5" cols="78" ></textarea>
+                    </li>
+
+                    <!--Botones Formulario-->
                     <li class="btn">
-                        <button type="submit">Enviar Datos Usuario</button>
+                        <button type="submit" id="enviar">Enviar Datos Usuario</button>
                     </li>
                     <li class="btn">
-                        <button type="submit">Limpiar Datos ingresados</button>
+                        <button type="reset" id="limpiar">Limpiar Datos ingresados</button>
                     </li>
                 </ul>
-            </ul>
-        </fieldset>
-    </form>
+            </fieldset>
+        </form>
 
-    <!--JavaScripts-->
-    <script src="js/inicio.js" async defer></script>
-</body>
+        <!--JavaScripts-->
+        <script src="js/Persona.js" async defer></script>
+        <script src="js/index.js" async defer></script>
+    </body>
 </html>
