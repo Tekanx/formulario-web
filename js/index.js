@@ -15,7 +15,7 @@ var lenguajeC = document.getElementById("c");
 var lenguajeCmas = document.getElementById("c++");
 var conocimiento = document.getElementById("knowledge");
 var descripcion = document.getElementById("desPersonal");
-console.log(conocimiento.innerHTML.length);
+mensaje.style.display = "none";
 var btnEnviar = document.getElementById("enviar");
 var btnReset = document.getElementById("limpiar");
 function enviarFormulario(event) {
@@ -36,7 +36,6 @@ function enviarFormulario(event) {
     if (faltasUsuario.length === 0) {
         form.style.display = "none";
         mensaje.style.display = "block";
-        mensaje.innerHTML = "MUCHAS GRACIAS POR RELLENAR EL FORMULARIO!";
         mensaje.style.color = "#ff0000";
         console.log(conocimiento.innerHTML.length);
     }
@@ -48,7 +47,7 @@ function faltas(faltasUsuario) {
         alert(mensaje);
     });
 }
-function limpiarFormulario() {
+function limpiarDatos() {
     nombreUsuario.nodeValue = '';
     apellidoUsuario.nodeValue = '';
     rut.nodeValue = '';
@@ -58,4 +57,4 @@ function limpiarFormulario() {
     descripcion.nodeValue = '';
 }
 btnEnviar.addEventListener("submit", enviarFormulario);
-btnReset.addEventListener("reset", limpiarFormulario);
+btnReset.addEventListener("reset", limpiarDatos);
