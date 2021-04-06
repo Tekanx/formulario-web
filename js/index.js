@@ -4,22 +4,16 @@ var nombreUsuario = document.getElementById("nameUser");
 var apellidoUsuario = document.getElementById("lastnameUser");
 var rut = document.getElementById("rutUser");
 var digitoVerificador = document.getElementById("dv");
-var rutUsuario = rut + "-" + digitoVerificador;
 var emailUsuario = document.getElementById("emailUser");
 var numeroUsuario = document.getElementById("phoneNumberUser");
-var lenguajePython = document.getElementById("python");
-var lenguajeJava = document.getElementById("java");
-var lenguajeType = document.getElementById("type");
-var lenguajePHP = document.getElementById("php");
-var lenguajeC = document.getElementById("c");
-var lenguajeCmas = document.getElementById("c++");
+var lenguajes = document.getElementsByName("langProgramming");
 var conocimiento = document.getElementById("knowledge");
+var tiempoExp = document.getElementsByName("yearsKnowledge");
 var descripcion = document.getElementById("desPersonal");
 mensaje.style.display = "none";
 var btnEnviar = document.getElementById("enviar");
 var btnReset = document.getElementById("limpiar");
 function enviarFormulario(event) {
-    var lenguajes = [];
     var faltasUsuario = [];
     if (isNaN(parseInt(nombreUsuario.nodeValue)))
         faltasUsuario.push("El nombre no puede contener numeros");
@@ -38,6 +32,7 @@ function enviarFormulario(event) {
         mensaje.style.display = "block";
         mensaje.style.color = "#ff0000";
         console.log(conocimiento.innerHTML.length);
+        imprimirUsuario();
     }
     else
         faltas(faltasUsuario);
@@ -46,6 +41,28 @@ function faltas(faltasUsuario) {
     faltasUsuario.forEach(function (mensaje) {
         alert(mensaje);
     });
+}
+function imprimirUsuario() {
+    var lenguajesUsuario = [];
+    var rutUsuario = rut + "-" + digitoVerificador;
+    var numeroCelular = "+56" + numeroUsuario.nodeValue;
+    console.log(nombreUsuario.nodeValue);
+    console.log(apellidoUsuario.nodeValue);
+    console.log(rutUsuario);
+    console.log(emailUsuario.nodeValue);
+    console.log(numeroCelular);
+    lenguajes.forEach(function (leng) {
+        lenguajesUsuario.push(leng.nodeValue);
+    });
+    console.log("-------------------------------------------------");
+    console.log("El Usuario tiene estos conocimientos de lenguaje: ");
+    lenguajesUsuario.forEach(function (leng) {
+        console.log(leng);
+    });
+    console.log("-------------------------------------------------");
+    console.log("Tiene " + conocimiento.nodeValue + "% de conocimiento");
+    console.log("Tiene " + tiempoExp.item.toString + " a\u00F1os de experiencia");
+    console.log(nombreUsuario.nodeValue + " " + apellidoUsuario.nodeValue + " se describe de la siguiente forma: " + descripcion.nodeValue);
 }
 function limpiarDatos() {
     nombreUsuario.nodeValue = '';

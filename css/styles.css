@@ -30,7 +30,7 @@ form{
     background-color: dimgrey;
     box-shadow: 10px 15px 40px black;
     padding: 10px;
-    width: 70%;
+    width:max-content;
     margin: auto;
     margin-top: 30px;
     font-family:Arial;
@@ -43,9 +43,6 @@ form ul{
 form ul li{
     margin-bottom: 1em;
     margin-left: 10px;
-}
-
-label{
 }
 
 input{
@@ -84,6 +81,10 @@ input{
 }
 
 /* Selecciones Formulario */
+
+#desPersonal{
+    margin-right: 1em;
+}
 
 /* Botones Formulario*/
 .btn{
